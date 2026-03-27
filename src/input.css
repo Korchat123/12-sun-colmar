@@ -13,7 +13,7 @@
     height: 64px;
 
 }
-    ul,li,h1,.mainLogo{
+    ul,li,h1.logoText,.mainLogo{
     @apply flex flex-row justify-center content-center  flex-wrap shrink-0;
     height: 64px;
 
@@ -59,27 +59,95 @@
     }
     
 
-    
-    @media screen and (width < 48rem) {
-    li .logo,.logo{
-         @apply flex flex-row justify-evenly shrink-0 ml-7;
-          min-height: 50px;
-            height: 64px;
-             width: 100%;
-        }
-    ul{ @apply flex flex-row justify-evenly;
-        width: 100%;
 
+    @media screen and (width < 48rem) {
+    
+    nav{
+        @apply justify-center overflow-hidden flex-nowrap;
     }
-    .logoText{ 
+        li .logo,.logo{
+         @apply flex flex-row justify-evenly shrink ml-7;
+             
+        }
+    ul{ @apply flex flex-row justify-evenly flex-nowrap shrink;
+         
+    }
+      h1.logoText ,.logoText{ 
         @apply hidden;
 
         }
     
-    nav{
-        @apply justify-center;
-    }
     .mainLogo,.otherLogo{
-        @apply m-0 justify-center self-center;
+        @apply m-0 justify-center self-center shrink;
     }
     }
+
+
+    /* START BANNER  CSS 
+        create .banner use it flexbox row so have to have another box to store text part 
+        top 32 px margin
+        left 24 px margin 
+        worng it have bg so change to padding
+        add bg color
+    */
+
+     .banner {
+        @apply flex flex-row justify-start pt-8 pl-6 pb-8 gap-6 flex-nowrap ;
+        background-color: rgb(199, 198, 191);
+
+    }
+    .banner img{
+    max-width:100%;
+    height: 100%; 
+       
+        
+    }
+    .banner div{
+        @apply flex flex-col justify-center content-around m-6 mb-8 flex-wrap;
+        height: auto;
+        width: 40%;
+       
+    }
+    .banner div h1{
+        @apply  mb-8;
+         font-size: 60px;
+        font-weight: 800;
+        
+    }
+    .banner div p{
+        @apply  mb-8;
+         font-size: 40px;
+        font-weight: 600;
+    }
+    .banner div input{
+            @apply  bg-gray-700 text-white self-center;
+        width: 70%;
+        height: 80px;
+    }
+    
+    
+    @media screen and (width < 48rem) {
+     
+    .banner{ @apply flex flex-col justify-start  p-0 m-0;
+
+    }
+    .banner div{
+         @apply pt-0 m-0;
+        width: 100%;
+    }
+    .banner div h1{
+
+        @apply  mb-0 mt-8 ml-4;
+    }
+     .banner div p{
+        @apply  mb-0 mt-8 ml-4;
+         font-size: 40px;
+        font-weight: 600;
+    }
+    .banner div input{
+            @apply  mb-8 mt-6;
+
+    }
+
+
+    } 
