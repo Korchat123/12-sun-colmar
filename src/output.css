@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
@@ -190,6 +191,10 @@ body {
   margin: calc(var(--spacing) * 0);
   padding: calc(var(--spacing) * 0);
   font-family: var(--font-sans);
+  text-align: left;
+}
+a {
+  color: var(--color-cyan-400);
 }
 nav {
   display: flex;
@@ -211,7 +216,7 @@ h1 {
   font-weight: 800;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
 }
 p {
@@ -465,6 +470,7 @@ div.startLerning {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  text-align: left;
   background-color: rgb(199, 198, 191);
   width: 100%;
   padding: 32px 72px;
@@ -480,15 +486,29 @@ div.couseDetail {
   justify-content: space-evenly;
   background-color: rgb(231, 230, 218);
   height: auto;
+  width: 30%;
 }
 div.couseDetail img {
   height: auto;
 }
-div.couseDetail p,h2 {
+div.couseDetail h2 {
+  margin: 8px 16px;
+}
+div.couseDetail p {
   margin: 8px 16px;
 }
 @media screen and (width < 48rem) {
+  div.startLerning {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: stretch;
+  }
+  div.couseDetail h2 {
+    width: 100%;
+  }
   div.couseDetail {
+    width: 100%;
     background-color: rgb(121, 119, 104);
   }
   div.couseDetail p,img {
@@ -516,7 +536,7 @@ div.HThesis {
   padding-left: calc(var(--spacing) * 6);
   width: 60%;
 }
-div.Thesis span.left h1 {
+div.Thesis span.left h2 {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -534,6 +554,7 @@ div.Thesis span.left p {
 div.Thesis div.right {
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
   justify-content: stretch;
   width: 40%;
   height: auto;
@@ -541,6 +562,7 @@ div.Thesis div.right {
 div.Thesis div.sub-right {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   padding: calc(var(--spacing) * 4);
   width: 100%;
   height: auto;
@@ -551,6 +573,7 @@ div.Thesis div.sub-right img {
 }
 div.Thesis div.sub-right span {
   padding-left: calc(var(--spacing) * 2);
+  text-align: left;
   width: 65%;
 }
 .Thesis div,div video {
@@ -576,11 +599,29 @@ div.Thesis div.sub-right span {
   justify-content: flex-start;
   width: 100%;
 }
+.end1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
 .end2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 70%;
+  width: 100%;
+}
+@media screen and (width < 48rem) {
+  .end1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: calc(var(--spacing) * 4);
+    width: 100%;
+  }
+  .end2 {
+    display: none;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";

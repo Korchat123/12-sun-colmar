@@ -5,7 +5,11 @@
 
     body{
     @apply m-0 p-0 font-sans;
+    text-align: left;
 }
+    a{
+        @apply text-cyan-400;
+    }
 
     nav{
     @apply flex flex-row  ;
@@ -23,7 +27,7 @@
         
     }
     h2{
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 500;
     }
     p{
@@ -290,7 +294,8 @@
 
     div.startLerning{
         @apply   flex flex-row justify-evenly flex-wrap shrink ;
-    background-color: rgb(199, 198, 191);
+    text-align: left;
+        background-color: rgb(199, 198, 191);
         width: 100%;
     padding: 32px 72px;
     height:auto;
@@ -299,20 +304,29 @@
         @apply mr-8 mb-8 flex flex-col justify-evenly flex-wrap shrink ;
    background-color: rgb(231, 230, 218);
     height:auto;
-        
+    width: 30%;
     }
     div.couseDetail img{
         height:auto;
     }
-    div.couseDetail p,h2{
+    div.couseDetail h2{
+        margin: 8px 16px;
+    }
+    
+    div.couseDetail  p{
         margin: 8px 16px;
     }
 
-
     /* Mobile Course */
      @media screen and (width < 48rem) {
-
+div.startLerning{
+        @apply   flex flex-col content-stretch w-full;
+    }
+     div.couseDetail h2{
+        width: 100%;
+     }
         div.couseDetail {
+            width: 100%;
             background-color: rgb(121, 119, 104);
         }
         div.couseDetail p,img{
@@ -346,7 +360,7 @@ div.HThesis{
         @apply  flex flex-col pt-8 pl-6 ;
         width:60%;
     }
-   div.Thesis span.left h1{
+   div.Thesis span.left h2{
         
         @apply w-full flex flex-row justify-start pt-6;
     }
@@ -359,12 +373,12 @@ div.HThesis{
 
 
     div.Thesis div.right{
-        @apply flex flex-col justify-stretch;
+        @apply flex flex-col justify-stretch content-start;
     width: 40%;
     height: auto;
     }
    div.Thesis  div.sub-right{
-        @apply flex flex-row p-4 ;
+        @apply flex flex-row p-4 justify-start;
         width: 100%;
         height: auto;
     }
@@ -376,16 +390,10 @@ div.HThesis{
     
    div.Thesis  div.sub-right span{
         @apply pl-2;
+        text-align: left;
         width: 65%;
     }
    
-    
-
-
-
-
-
-
 
     /* Mobile Course */
     .Thesis div,div video{
@@ -404,9 +412,12 @@ div.HThesis{
         }
      }
 
-
-
      /* end */
      .end{@apply flex flex-row justify-start ;width: 100%;}
+    .end1{@apply flex flex-row justify-start; width: 100%}
+         .end2{@apply flex flex-row justify-end; width: 100%}
 
-         .end2{@apply flex flex-row justify-end; width: 70%}
+    @media screen and (width < 48rem) {
+        .end1{@apply flex flex-row justify-center p-4; width: 100%}
+        .end2{@apply hidden;}
+    }
