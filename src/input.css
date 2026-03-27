@@ -17,7 +17,14 @@
     @apply flex flex-row justify-center content-center  flex-wrap shrink-0;
     height: 64px;
 
-}
+}    h1{
+         font-size: 50px;
+        font-weight: 800;
+        
+    }
+    p{
+         font-size: 16px;
+        font-weight: 600;}
 
 
 
@@ -120,9 +127,9 @@
         font-weight: 600;
     }
     .banner div input{
-            @apply  bg-gray-700 text-white self-center;
+            @apply  bg-gray-700 text-white self-center p-2;
+            font-size:100%;
         width: 70%;
-        height: 80px;
     }
     
     
@@ -151,3 +158,126 @@
 
 
     } 
+
+
+
+
+
+
+    /* it started to repeated pic on left and then text on right */
+
+    .infoMain{
+        @apply flex flex-row m-0 p-0;
+        width: 100%;
+    }
+
+
+
+    .infoMain div {
+        @apply  flex flex-col pt-8 pl-6;
+        width:60%;
+    }
+    span.left h1{
+        
+        @apply w-full flex flex-col justify-start pt-8;
+    }
+    span.left h1{
+        
+        @apply w-full flex flex-col justify-start pt-4;
+    }
+    
+   span.leftF{
+        @apply  justify-end pb-4;
+        margin-top: auto;
+    }
+    
+
+
+
+    div.right{
+        @apply flex flex-col justify-stretch;
+    width: 40%;
+    height: auto;
+    }
+    div.sub-right{
+        @apply flex flex-row p-4 ;
+        width: 100%;
+        height: auto;
+    }
+    div.sub-right img{
+        width: 35%;
+        height: auto;
+        
+    }
+    
+    div.sub-right span{
+        @apply pl-2;
+        width: 65%;
+    }
+    img.mobile{
+        @apply hidden;
+    }
+
+
+
+
+    /* mobile infoMain */
+ @media screen and (width < 48rem) {
+    img.mobile{
+        @apply block;
+    }
+    img.pc{
+        @apply hidden;
+    }
+
+    div.infoMain{
+        @apply flex-col;
+    }
+
+
+/* LEFT */
+
+ .infoMain div {
+        @apply  flex flex-col pt-8 pl-6;
+        width:100%;
+    }
+    span.left h1{
+        
+        @apply w-full flex flex-col justify-start pt-8;
+    }
+    span.left h1{
+        
+        @apply w-full flex flex-col justify-start pt-4;
+    }
+    
+   span.leftF{
+        @apply  justify-end pb-4;
+        margin-top: auto;
+    }
+
+/* RIGHT */
+
+
+    div.right{
+        @apply flex flex-col justify-stretch;
+    width: 100%;
+    height: auto;
+    }
+
+
+    div.sub-right{
+        @apply flex flex-col p-4 ;
+        width: 100%;
+        height: auto;
+    }
+    div.sub-right img{
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    div.sub-right span{
+        @apply pl-2;
+        width: 100%;
+    }
+ }

@@ -203,6 +203,14 @@ ul,li,h1.logoText,.mainLogo {
   justify-content: center;
   height: 64px;
 }
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+p {
+  font-size: 16px;
+  font-weight: 600;
+}
 .mainLogo {
   align-content: center;
   justify-items: center;
@@ -306,9 +314,10 @@ h1.logoText+h1.logoText {
 .banner div input {
   align-self: center;
   background-color: var(--color-gray-700);
+  padding: calc(var(--spacing) * 2);
   color: var(--color-white);
+  font-size: 100%;
   width: 70%;
-  height: 80px;
 }
 @media screen and (width < 48rem) {
   .banner {
@@ -338,6 +347,123 @@ h1.logoText+h1.logoText {
   .banner div input {
     margin-top: calc(var(--spacing) * 6);
     margin-bottom: calc(var(--spacing) * 8);
+  }
+}
+.infoMain {
+  margin: calc(var(--spacing) * 0);
+  display: flex;
+  flex-direction: row;
+  padding: calc(var(--spacing) * 0);
+  width: 100%;
+}
+.infoMain div {
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(var(--spacing) * 8);
+  padding-left: calc(var(--spacing) * 6);
+  width: 60%;
+}
+span.left h1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: calc(var(--spacing) * 8);
+}
+span.left h1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: calc(var(--spacing) * 4);
+}
+span.leftF {
+  justify-content: flex-end;
+  padding-bottom: calc(var(--spacing) * 4);
+  margin-top: auto;
+}
+div.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 40%;
+  height: auto;
+}
+div.sub-right {
+  display: flex;
+  flex-direction: row;
+  padding: calc(var(--spacing) * 4);
+  width: 100%;
+  height: auto;
+}
+div.sub-right img {
+  width: 35%;
+  height: auto;
+}
+div.sub-right span {
+  padding-left: calc(var(--spacing) * 2);
+  width: 65%;
+}
+img.mobile {
+  display: none;
+}
+@media screen and (width < 48rem) {
+  img.mobile {
+    display: block;
+  }
+  img.pc {
+    display: none;
+  }
+  div.infoMain {
+    flex-direction: column;
+  }
+  .infoMain div {
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(var(--spacing) * 8);
+    padding-left: calc(var(--spacing) * 6);
+    width: 100%;
+  }
+  span.left h1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: calc(var(--spacing) * 8);
+  }
+  span.left h1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: calc(var(--spacing) * 4);
+  }
+  span.leftF {
+    justify-content: flex-end;
+    padding-bottom: calc(var(--spacing) * 4);
+    margin-top: auto;
+  }
+  div.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+    height: auto;
+  }
+  div.sub-right {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--spacing) * 4);
+    width: 100%;
+    height: auto;
+  }
+  div.sub-right img {
+    width: 100%;
+    height: auto;
+  }
+  div.sub-right span {
+    padding-left: calc(var(--spacing) * 2);
+    width: 100%;
   }
 }
 @property --tw-rotate-x {
