@@ -169,6 +169,9 @@
   .start {
     inset-inline-start: var(--spacing);
   }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
   .block {
     display: block;
   }
@@ -491,6 +494,93 @@ div.couseDetail p,h2 {
   div.couseDetail p,img {
     display: none;
   }
+}
+div.HThesis {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+  background-color: rgb(199, 198, 191);
+}
+.Thesis {
+  margin: calc(var(--spacing) * 0);
+  display: flex;
+  flex-direction: row;
+  padding-bottom: calc(var(--spacing) * 8);
+  padding-left: calc(var(--spacing) * 6);
+  width: 100%;
+}
+.Thesis div {
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(var(--spacing) * 8);
+  padding-left: calc(var(--spacing) * 6);
+  width: 60%;
+}
+div.Thesis span.left h1 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: calc(var(--spacing) * 6);
+}
+div.Thesis span.left p {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: calc(var(--spacing) * 2);
+}
+div.Thesis div.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 40%;
+  height: auto;
+}
+div.Thesis div.sub-right {
+  display: flex;
+  flex-direction: row;
+  padding: calc(var(--spacing) * 4);
+  width: 100%;
+  height: auto;
+}
+div.Thesis div.sub-right img {
+  width: 35%;
+  height: auto;
+}
+div.Thesis div.sub-right span {
+  padding-left: calc(var(--spacing) * 2);
+  width: 65%;
+}
+.Thesis div,div video {
+  margin: calc(var(--spacing) * 0);
+  width: 100%;
+  padding: calc(var(--spacing) * 0);
+}
+@media screen and (width < 48rem) {
+  div.HThesis {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+  div.Thesis span {
+    display: none;
+  }
+  div.Thesis div.right {
+    display: none;
+  }
+}
+.end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+.end2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 70%;
 }
 @property --tw-rotate-x {
   syntax: "*";

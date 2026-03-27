@@ -321,4 +321,92 @@
      }
 
 
-     
+
+
+
+     /* same as info */
+     /* it started to repeated pic on left and then text on right */
+
+
+div.HThesis{
+        padding-top:32px ;
+         padding-bottom:32px ;
+           text-align: center;
+    background-color: rgb(199, 198, 191);       
+    }
+
+    .Thesis{
+        @apply flex flex-row m-0 pl-6 pb-8;
+        width: 100%;
+    }
+
+
+
+    .Thesis div {
+        @apply  flex flex-col pt-8 pl-6 ;
+        width:60%;
+    }
+   div.Thesis span.left h1{
+        
+        @apply w-full flex flex-row justify-start pt-6;
+    }
+     div.Thesis span.left p{
+         text-align: left;
+        @apply w-full flex flex-row justify-start pt-2;
+    }
+    
+
+
+
+    div.Thesis div.right{
+        @apply flex flex-col justify-stretch;
+    width: 40%;
+    height: auto;
+    }
+   div.Thesis  div.sub-right{
+        @apply flex flex-row p-4 ;
+        width: 100%;
+        height: auto;
+    }
+    div.Thesis div.sub-right img{
+        width: 35%;
+        height: auto;
+        
+    }
+    
+   div.Thesis  div.sub-right span{
+        @apply pl-2;
+        width: 65%;
+    }
+   
+    
+
+
+
+
+
+
+
+    /* Mobile Course */
+    .Thesis div,div video{
+        @apply w-full m-0 p-0;
+ 
+    }
+     @media screen and (width < 48rem) {
+        div.HThesis{
+        padding-top:32px ;
+         padding-bottom:16px ;}
+        div.Thesis span{@apply hidden;
+
+        }
+        div.Thesis div.right{
+            @apply hidden;
+        }
+     }
+
+
+
+     /* end */
+     .end{@apply flex flex-row justify-start ;width: 100%;}
+
+         .end2{@apply flex flex-row justify-end; width: 70%}
