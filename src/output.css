@@ -207,6 +207,10 @@ h1 {
   font-size: 50px;
   font-weight: 800;
 }
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
 p {
   font-size: 16px;
   font-weight: 600;
@@ -417,31 +421,9 @@ img.mobile {
   div.infoMain {
     flex-direction: column;
   }
-  .infoMain div {
-    display: flex;
-    flex-direction: column;
-    padding-top: calc(var(--spacing) * 8);
-    padding-left: calc(var(--spacing) * 6);
+  .infoMain div.left {
+    display: none;
     width: 100%;
-  }
-  span.left h1 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: calc(var(--spacing) * 8);
-  }
-  span.left h1 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: calc(var(--spacing) * 4);
-  }
-  span.leftF {
-    justify-content: flex-end;
-    padding-bottom: calc(var(--spacing) * 4);
-    margin-top: auto;
   }
   div.right {
     display: flex;
@@ -462,8 +444,52 @@ img.mobile {
     height: auto;
   }
   div.sub-right span {
+    display: flex;
+    flex-direction: column;
     padding-left: calc(var(--spacing) * 2);
     width: 100%;
+    height: auto;
+  }
+}
+div.HstartLerning {
+  padding-top: 32px;
+  text-align: center;
+  background-color: rgb(199, 198, 191);
+}
+div.startLerning {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(199, 198, 191);
+  width: 100%;
+  padding: 32px 72px;
+  height: auto;
+}
+div.couseDetail {
+  margin-right: calc(var(--spacing) * 8);
+  margin-bottom: calc(var(--spacing) * 8);
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(231, 230, 218);
+  height: auto;
+}
+div.couseDetail img {
+  height: auto;
+}
+div.couseDetail p,h2 {
+  margin: 8px 16px;
+}
+@media screen and (width < 48rem) {
+  div.couseDetail {
+    background-color: rgb(121, 119, 104);
+  }
+  div.couseDetail p,img {
+    display: none;
   }
 }
 @property --tw-rotate-x {

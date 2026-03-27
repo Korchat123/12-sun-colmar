@@ -22,6 +22,10 @@
         font-weight: 800;
         
     }
+    h2{
+        font-size: 2rem;
+        font-weight: 500;
+    }
     p{
          font-size: 16px;
         font-weight: 600;}
@@ -217,7 +221,7 @@
     img.mobile{
         @apply hidden;
     }
-
+    
 
 
 
@@ -237,47 +241,84 @@
 
 /* LEFT */
 
- .infoMain div {
-        @apply  flex flex-col pt-8 pl-6;
+ .infoMain div.left {
+        @apply  hidden;
         width:100%;
     }
-    span.left h1{
-        
-        @apply w-full flex flex-col justify-start pt-8;
-    }
-    span.left h1{
-        
-        @apply w-full flex flex-col justify-start pt-4;
-    }
-    
-   span.leftF{
-        @apply  justify-end pb-4;
-        margin-top: auto;
-    }
+  
 
 /* RIGHT */
 
 
     div.right{
-        @apply flex flex-col justify-stretch;
+        @apply flex flex-col justify-stretch ;
     width: 100%;
     height: auto;
     }
 
 
     div.sub-right{
-        @apply flex flex-col p-4 ;
+        @apply flex flex-col p-4   ;
         width: 100%;
         height: auto;
     }
     div.sub-right img{
+        
         width: 100%;
         height: auto;
         
     }
     
     div.sub-right span{
-        @apply pl-2;
+        @apply flex flex-col pl-2 ;
         width: 100%;
+        height: auto;
     }
  }
+
+
+
+
+
+
+ /* Start Learning */
+    div.HstartLerning{
+        padding-top:32px ;
+           text-align: center;
+    background-color: rgb(199, 198, 191);       
+    }
+
+    div.startLerning{
+        @apply   flex flex-row justify-evenly flex-wrap shrink ;
+    background-color: rgb(199, 198, 191);
+        width: 100%;
+    padding: 32px 72px;
+    height:auto;
+    }
+    div.couseDetail{
+        @apply mr-8 mb-8 flex flex-col justify-evenly flex-wrap shrink ;
+   background-color: rgb(231, 230, 218);
+    height:auto;
+        
+    }
+    div.couseDetail img{
+        height:auto;
+    }
+    div.couseDetail p,h2{
+        margin: 8px 16px;
+    }
+
+
+    /* Mobile Course */
+     @media screen and (width < 48rem) {
+
+        div.couseDetail {
+            background-color: rgb(121, 119, 104);
+        }
+        div.couseDetail p,img{
+        @apply hidden;
+        }
+     }
+
+
+     
